@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "6bc9b275-cc8c-4164-a828-4808e48550c8",
+		"name": "Barikoi Reverse Geo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23935186"
+	},
+	"item": [
+		{
+			"name": "GET API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/* storing values from the response body */\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"\r",
+							"let id= jsonData.place.id\r",
+							"let distance = jsonData.place.distance_within_meters\r",
+							"let address = jsonData.place.address\r",
+							"let area= jsonData.place.area\r",
+							"let city= jsonData.place.city\r",
+							"let postcode= jsonData.place.postCode\r",
+							"let addressBn= jsonData.place.address_bn\r",
+							"let areaBn= jsonData.place.area_bn\r",
+							"let cityBn= jsonData.place.city_bn\r",
+							"let country= jsonData.place.country\r",
+							"let division= jsonData.place.division\r",
+							"let district= jsonData.place.district\r",
+							"let subDis= jsonData.place.sub_district\r",
+							"let pauroshova= jsonData.place.pauroshova\r",
+							"let union= jsonData.place.union\r",
+							"let locationType= jsonData.place.location_type\r",
+							"let placeName= jsonData.place.address_components.place_name\r",
+							"let house= jsonData.place.address_components.house\r",
+							"let road= jsonData.place.address_components.road\r",
+							"let areaCom= jsonData.place.area_components.area\r",
+							"let subArea= jsonData.place.area_components.sub_area\r",
+							"let status= jsonData.status\r",
+							"\r",
+							"console.log(id, distance, house, road, status)\r",
+							"\r",
+							"/* test cases */\r",
+							"\r",
+							"pm.test('tc_001: place id validation', function() {\r",
+							"    pm.expect(jsonData.place.id).to.equal(id)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_002: place distance validation', function() {\r",
+							"    pm.expect(jsonData.place.distance_within_meters).to.equal(distance)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_003: place address validation', function() {\r",
+							"    pm.expect(jsonData.place.address).to.equal(address)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_004: place area validation', function() {\r",
+							"    pm.expect(jsonData.place.area).to.equal(area)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_005: place city validation', function() {\r",
+							"    pm.expect(jsonData.place.city).to.equal(city)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_006: place postcode validation', function() {\r",
+							"    pm.expect(jsonData.place.postCode).to.equal(postcode)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_007: place address_bn validation', function() {\r",
+							"    pm.expect(jsonData.place.address_bn).to.equal(addressBn)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_008: place cityBn validation', function() {\r",
+							"    pm.expect(jsonData.place.city_bn).to.equal(cityBn)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_009: place division validation', function() {\r",
+							"    pm.expect(jsonData.place.division).to.equal(division)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_010: place district validation', function() {\r",
+							"    pm.expect(jsonData.place.district).to.equal(district)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_011: place sub district validation', function() {\r",
+							"    pm.expect(jsonData.place.sub_district).to.equal(subDis)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_012: place pauroshova validation', function() {\r",
+							"    pm.expect(jsonData.place.pauroshova).to.equal(pauroshova)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_013: place union validation', function() {\r",
+							"    pm.expect(jsonData.place.union).to.equal(union)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_014: place loation type validation', function() {\r",
+							"    pm.expect(jsonData.place.location_type).to.equal(locationType)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_015: address component place name validation', function() {\r",
+							"    pm.expect(jsonData.place.address_components.place_name).to.equal(placeName)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_016: address components house validation', function() {\r",
+							"    pm.expect(jsonData.place.address_components.house).to.equal(house)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_017: address components road validation', function() {\r",
+							"    pm.expect(jsonData.place.address_components.road).to.equal(road)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_018: area components area validation', function() {\r",
+							"    pm.expect(jsonData.place.area_components.area).to.equal(areaCom)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_019: area components sub area validation', function() {\r",
+							"    pm.expect(jsonData.place.area_components.sub_area).to.equal(subArea)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_020: status code validation', function() {\r",
+							"    pm.expect(jsonData.status).to.equal(status)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_021: area_bn validation', function() {\r",
+							"    pm.expect(jsonData.place.area_bn).to.equal(areaBn)\r",
+							"})\r",
+							"\r",
+							"pm.test('tc_022: country validation', function() {\r",
+							"    pm.expect(jsonData.place.country).to.equal(country)\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://barikoi.xyz/v1/api/search/reverse/bkoi_4967edf1bd5c899b6e965f2bb2b67f6f0aca57e7b2e2bae349c2dab923ba695d/geocode?longitude=90.3640092250589&latitude=23.823905603292577&district=true&post_code=true&country=true&sub_district=true&union=true&pauroshova=true&location_type=true&division=true&address=true&area=true&bangla=true",
+					"protocol": "https",
+					"host": [
+						"barikoi",
+						"xyz"
+					],
+					"path": [
+						"v1",
+						"api",
+						"search",
+						"reverse",
+						"bkoi_4967edf1bd5c899b6e965f2bb2b67f6f0aca57e7b2e2bae349c2dab923ba695d",
+						"geocode"
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "90.3640092250589"
+						},
+						{
+							"key": "latitude",
+							"value": "23.823905603292577"
+						},
+						{
+							"key": "district",
+							"value": "true"
+						},
+						{
+							"key": "post_code",
+							"value": "true"
+						},
+						{
+							"key": "country",
+							"value": "true"
+						},
+						{
+							"key": "sub_district",
+							"value": "true"
+						},
+						{
+							"key": "union",
+							"value": "true"
+						},
+						{
+							"key": "pauroshova",
+							"value": "true"
+						},
+						{
+							"key": "location_type",
+							"value": "true"
+						},
+						{
+							"key": "division",
+							"value": "true"
+						},
+						{
+							"key": "address",
+							"value": "true"
+						},
+						{
+							"key": "area",
+							"value": "true"
+						},
+						{
+							"key": "bangla",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
