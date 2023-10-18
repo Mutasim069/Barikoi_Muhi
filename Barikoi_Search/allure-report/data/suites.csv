@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Oct 18 23:03:41 BDT 2023","Wed Oct 18 23:03:41 BDT 2023","328","Default suite","Default test","test_case.SearchTest","test_case.SearchTest","UnhideSearchLocation","unhide search location section",""
+"passed","Wed Oct 18 23:03:41 BDT 2023","Wed Oct 18 23:03:41 BDT 2023","274","Default suite","Default test","test_case.SearchTest","test_case.SearchTest","HidesearchLocation","hide search location section",""
+"passed","Wed Oct 18 23:03:37 BDT 2023","Wed Oct 18 23:03:41 BDT 2023","3289","Default suite","Default test","test_case.SearchTest","test_case.SearchTest","TitleTest","title check",""

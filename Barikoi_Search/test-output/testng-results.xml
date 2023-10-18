@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-18T23:03:37 BDT" name="Default suite" finished-at="2023-10-18T23:03:41 BDT" duration-ms="4024">
+    <groups>
+    </groups>
+    <test started-at="2023-10-18T23:03:37 BDT" name="Default test" finished-at="2023-10-18T23:03:41 BDT" duration-ms="4024">
+      <class name="test_case.SearchTest">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:test_case.SearchTest@1c93f6e1]" started-at="2023-10-18T23:03:35 BDT" name="setBrowser" finished-at="2023-10-18T23:03:37 BDT" duration-ms="1810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method signature="TitleTest()[pri:0, instance:test_case.SearchTest@1c93f6e1]" started-at="2023-10-18T23:03:37 BDT" name="TitleTest" description="title check" finished-at="2023-10-18T23:03:41 BDT" duration-ms="3322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TitleTest -->
+        <test-method signature="HidesearchLocation()[pri:1, instance:test_case.SearchTest@1c93f6e1]" started-at="2023-10-18T23:03:41 BDT" name="HidesearchLocation" description="hide search location section" finished-at="2023-10-18T23:03:41 BDT" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HidesearchLocation -->
+        <test-method signature="UnhideSearchLocation()[pri:2, instance:test_case.SearchTest@1c93f6e1]" started-at="2023-10-18T23:03:41 BDT" name="UnhideSearchLocation" description="unhide search location section" finished-at="2023-10-18T23:03:41 BDT" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UnhideSearchLocation -->
+        <test-method is-config="true" signature="getBrowser()[pri:0, instance:test_case.SearchTest@1c93f6e1]" started-at="2023-10-18T23:03:41 BDT" name="getBrowser" finished-at="2023-10-18T23:03:41 BDT" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBrowser -->
+      </class> <!-- test_case.SearchTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
